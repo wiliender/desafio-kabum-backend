@@ -36,3 +36,6 @@ _companies: list[Company] = [
         deadline=4,
     ),
 ]
+
+def _calc_shipping(weight: float, k: float):
+    return round((weight * k)/10, 2)
