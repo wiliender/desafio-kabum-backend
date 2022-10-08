@@ -38,4 +38,21 @@ _companies: list[Company] = [
 ]
 
 def _calc_shipping(weight: float, k: float):
-    return round((weight * k)/10, 2)
+    return round((weight * k)/10, 2) # Up to two decimal places
+
+def get(width: float, height: float, weight: float) -> list[CompanyResult]:
+    filterA = filter(
+        lambda x: width < x.max_width and width >= x.min_width,
+        _companies,
+    )
+    filterB = filter(
+        lambda x: height < x.max_height and height >= x.min_height,
+        filterA,
+    )
+
+    return [
+        CompanyResult(
+            nome=i.name,
+            valor_frete=_calc_shipping(weight, i.shipping),
+            prazo_dias=i.deadline,
+        ) for i in filterB]
