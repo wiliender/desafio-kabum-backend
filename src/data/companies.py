@@ -46,7 +46,7 @@ def get(width: float, height: float, weight: float) -> list[CompanyResult]:
         _companies,
     )
     filterB = filter(
-        lambda x: height < x.max_height and height >= x.min_height,
+        lambda x: height < x.max_height and height >= x.min_height and weight > 0,
         filterA,
     )
 
