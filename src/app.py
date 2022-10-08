@@ -7,6 +7,7 @@ def create_app():
     CORS(app)
     
     # register routes
+    app.register_blueprint(shipping.route)
     app.register_blueprint(healthcheck.route)
     
     return app
