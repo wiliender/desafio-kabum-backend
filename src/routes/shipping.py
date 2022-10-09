@@ -4,7 +4,7 @@ from werkzeug.exceptions import BadRequest
 from schemas.shipping import Payload
 from data.companies import get
 
-route = Blueprint('shipping', __name__, url_prefix="/shipping")
+route = Blueprint('shipping', __name__, url_prefix="/shipping/")
 
 @route.route("/", methods=["POST"])
 def index():
@@ -20,7 +20,6 @@ def index():
         return jsonify({"error": err.get_body()}), 400  # type: ignore
 
     return jsonify(get(
-        
         width=data['dimension']['width'],  # type: ignore
         height=data['dimension']['height'],  # type: ignore
         weight=data['weight'],  # type: ignore
