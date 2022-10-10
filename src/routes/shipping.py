@@ -4,9 +4,9 @@ from werkzeug.exceptions import BadRequest
 from schemas.shipping import Payload
 from data.companies import get
 
-route = Blueprint('shipping', __name__, url_prefix="/shipping/")
+route = Blueprint('api', __name__, url_prefix="/v1")
 
-@route.route("/", methods=["POST"])
+@route.route("/shipping", methods=["POST"])
 def index():
     try:
         pl = request.get_json(force=True)
