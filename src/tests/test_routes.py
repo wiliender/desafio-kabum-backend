@@ -1,8 +1,8 @@
 from httpx import post, get
 from schemas.shipping import Payload
 
-url_healthcheck = "http://localhost:5000/"
-url_shipping = "http://localhost:5000/shipping/"
+url_healthcheck = "http://localhost:5000/v1/"
+url_shipping = "http://localhost:5000/v1/shipping"
 
 def test_get_healthcheck_200():
     request = get(url_healthcheck)
