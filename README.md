@@ -75,7 +75,11 @@ python app.py
 http://localhost:5000/v1/
 http://localhost:5000/v1/shipping/
 ```
+</div>
 
+<div>
+    <h2>Documentation Test POST</h2>
+    <img align="center" id="output_post.png" src="output_post.png" alt="">
 </div>
 
 <div>
