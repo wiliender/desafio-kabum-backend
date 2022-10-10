@@ -41,6 +41,16 @@ $ .venv/bin/activate
 ```
 
 <div>
+    <h2>Virtual Environments (Docker)</h2>
+    <a target="_blank" href="https://www.docker.com/">Install Docker<br></a>
+</div>
+
+```
+docker image build -t app-backend-kabum .
+docker run -p 5000:5000 -d app-backend-kabum
+```
+
+<div>
     <h2>Install Project Dependencies</h2>
 
 ```
