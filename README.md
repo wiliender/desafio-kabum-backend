@@ -72,8 +72,8 @@ python app.py
     <h2>Routes healthcheck GET and shipping POST</h2>
 
 ```
-http://localhost:5000/
-http://localhost:5000/shipping/
+http://localhost:5000/v1/
+http://localhost:5000/v1/shipping/
 ```
 
 </div>
