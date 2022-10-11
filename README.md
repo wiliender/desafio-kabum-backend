@@ -79,7 +79,7 @@ http://localhost:5000/v1/shipping/
 
 <div>
     <h2>Documentation Test POST</h2>
-    <img align="center" id="output_post.png" src="output_post.png" alt="">
+    <img align="center" id="swagger.png" src="swagger.png" alt="">
 </div>
 
 <div>
